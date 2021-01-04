@@ -1,5 +1,52 @@
 # NxdevLalit
 
+## 
+```
+nvm use 14
+npm create-nx-workspace@latest
+npm start
+
+npx nx e2e nxdev-lalit-e2e --watch
+
+```
+### create a react and/or node application
+```
+nx list => list of libs installed
+npm install --save-dev @nrwl/express
+
+npx nx nx g @nrwl/express:app api --fronendProject=nxdev-lalit
+
+npx nx g @nrwl/workspace:lib data
+# creates a data folder under lib directory with all scafolding like all ts files etc
+
+```
+
+### starting react and node server
+```
+npx nx nx serve api
+npx nx nx serve nxdev-lalit
+
+```
+
+### Creating a library
+```
+npx nx g @nrwl/react:lib ui
+
+# creating a component
+npx nx g @nrwl/react:component todos --project=ui --export
+
+
+npx nx g @nrwl/react:component todos --project=ui --export
+# project option will let nx , where to create the component
+# and --export tells to export the lib from the index.ts file
+
+```
+
+### depdendency graph
+```
+npx nx dep-graph
+```
+
 This project was generated using [Nx](https://nx.dev).
 
 <p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
